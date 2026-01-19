@@ -1,0 +1,7 @@
+Unlock Jenkins
+To ensure Jenkins is securely set up by the administrator, a password has been written to the log (not sure where to find it?) and this file on the server:
+
+/var/lib/jenkins/secrets/initialAdminPassword
+
+commabnd -  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+3f643d293b51494f9732e21861871177
