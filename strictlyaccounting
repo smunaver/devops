@@ -1,0 +1,28 @@
+Option 1 – Temporarily stop this DC from advertising SYSVOL (recommended)
+
+On the problematic DC:
+
+reg add HKLM\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters /v SysVolReady /t REG_DWORD /d 0 /f
+net stop netlogon
+net start netlogon
+
+
+This tells the domain:
+
+“This DC is not ready to serve SYSVOL.”
+
+Now:
+
+DFS referrals will go only to serv2 / serv3
+
+GPMC will work immediately
+
+Users will get correct policies
+
+DFSR can continue rebuilding in the background
+
+Once the state becomes 4, revert it:
+
+reg add HKLM\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters /v SysVolReady /t REG_DWORD /d 1 /f
+net stop netlogon
+net start netlogon
