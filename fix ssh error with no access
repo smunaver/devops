@@ -1,0 +1,9 @@
+ls -l /etc/ssh/ssh_host_*
+
+Re-generate SSH host keys
+
+sudo chmod 600 /etc/ssh/ssh_host_*_key
+sudo chmod 644 /etc/ssh/ssh_host_*_key.pub
+sudo chown root:root /etc/ssh/ssh_host_*
+
+sudo systemctl restart ssh
