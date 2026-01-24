@@ -1,0 +1,34 @@
+download an extract the terrafrom folder from here
+https://developer.hashicorp.com/terraform/install
+
+extract it to any folder 
+
+open system properties advanced and click on evieonment variables
+
+
+Add Terraform Path to System Environment Variables
+To add the Terraform executable to the system’s global path:
+
+1. Open the start menu, start typing environment and click Edit system environment variables. The System Properties window opens.
+
+2. Click the Environment Variables… button.
+
+
+3. Select the Path variable in the System variables section to add terraform for all accounts. Alternatively, select Path in the User variables section to add terraform for the currently logged-in user only. Click Edit once you select a Path.
+
+Press enter or click to view image in full size
+
+4. Click New in the edit window and enter the location of the Terraform folder.
+
+
+5. Click OK on all windows to apply the changes.
+
+Verify Terraform installation and configuration
+To check the Terraform global path configuration:
+
+1. Open a new command-prompt window.
+
+2. Enter the command to check the Terraform version:
+
+terraform -version
+Press enter or click to view image in full size
