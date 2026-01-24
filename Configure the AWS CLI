@@ -17,5 +17,16 @@ The following example configures a profile named userprod using sample values. R
 $ aws configure --profile userprod
 AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
 AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-Default region name [None]: us-west-2
+Default region name [None]: ap-south-2
 Default output format [None]: json
+
+
+Hyderabad
+ap-south-2
+Mumbai
+ap-south-1
+
+
+AKIA5KFQ3HKWRR2GXTHR
+
+2QMRZ+xF/2EgO+Xp+dR+uSFJJO+iPDrKO27Wwwar
