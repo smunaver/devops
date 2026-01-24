@@ -1,0 +1,21 @@
+https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html
+
+Using aws configure
+For general use, the aws configure command is the fastest way to set up your AWS CLI installation. This configure wizard prompts you for each piece of information you need to get started. Unless otherwise specified by using the --profile option, the AWS CLI stores this information in the default profile.
+
+The following example configures a default profile using sample values. Replace them with your own values as described in the following sections.
+
+
+$ aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]: json
+The following example configures a profile named userprod using sample values. Replace them with your own values as described in the following sections.
+
+
+$ aws configure --profile userprod
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]: json
