@@ -1,0 +1,5 @@
+apt-mark showmanual
+snap list
+systemctl list-units --type=service --state=running
+ss -tulpn
+du -h /opt /usr/local | sort -h
