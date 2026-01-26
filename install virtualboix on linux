@@ -1,0 +1,12 @@
+Using APT (Recommended for Simplicity)
+Open Terminal: Press Ctrl+Alt+T.
+Update Package List:
+bash
+sudo apt update
+Install VirtualBox:
+bash
+sudo apt install virtualbox virtualbox-ext-pack
+This installs VirtualBox and the Extension Pack, adding USB support and other features.
+Install Guest Additions (for inside the VM):
+bash
+sudo apt install virtualbox-guest-utils virtualbox-guest-x11
