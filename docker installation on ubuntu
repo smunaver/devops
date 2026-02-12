@@ -1,29 +1,27 @@
 https://docs.docker.com/engine/install/linux-postinstall/
 https://docs.docker.com/engine/install/ubuntu/
 
-1  ip addr sh
-    2  clear
-    3  sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
-    4  sudo apt update
-    5  sudo apt install ca-certificates curl
-    6  sudo install -m 0755 -d /etc/apt/keyrings
-    7  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-    8  sudo chmod a+r /etc/apt/keyrings/docker.asc
-    9  # Add the repository to Apt sources:
-   10  sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
-   11  Types: deb
-   12  URIs: https://download.docker.com/linux/ubuntu
-   13  Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
-   14  Components: stable
-   15  Signed-By: /etc/apt/keyrings/docker.asc
-   16  EOF
-   17  sudo apt update
-   18  sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-   19  sudo systemctl status docker
-   20  sudo systemctl start docker
-   21  sudo docker run hello-world
-   22  sudo groupadd docker
-   23  sudo usermod -aG docker $USER
-   24  docker ps -a
-   25  exit
-   26  docker ps -a
+
+sudo apt remove $(dpkg --get-selections docker.io docker-compose docker-compose-v2 docker-doc podman-docker containerd runc | cut -f1)
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl status docker
+sudo systemctl start docker
+sudo docker run hello-world
+sudo groupadd docker
+sudo usermod -aG docker $USER
