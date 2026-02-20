@@ -1,0 +1,30 @@
+✅ Step 1 — Update system alternatives to point to Java 11
+
+Run:
+
+sudo update-alternatives --config java
+
+You will see options like:
+
+Selection    Path                                      Priority   Status
+------------------------------------------------------------
+* 1          /usr/lib/jvm/java-21-openjdk-amd64/bin/java   2000    auto mode
+  2          /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111    manual mode
+
+Select option 2 → Java 11.
+
+Then run:
+
+sudo update-alternatives --config javac
+
+Select the Java 11 compiler as well.
+
+✅ Step 2 — Verify
+java -version
+javac -version
+mvn -version
+
+Expected:
+
+Java version: 11.x.x
+runtime: /usr/lib/jvm/java-11-openjdk-amd64
