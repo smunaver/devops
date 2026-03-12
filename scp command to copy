@@ -4,3 +4,9 @@ scp -r backup root@187.124.69.204:/opt/
 
 
 scp /home/user/downloads/backup.zip root@187.124.69.204:/opt/
+
+
+To copy files from your host into a Docker container, use the docker cp command.
+
+Syntax
+docker cp <source_path> <container_name_or_id>:<destination_path>
