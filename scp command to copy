@@ -1,0 +1,6 @@
+scp .\publish-artifacts\ root@187.124.69.204:/opt/bakcup
+
+scp -r backup root@187.124.69.204:/opt/
+
+
+scp /home/user/downloads/backup.zip root@187.124.69.204:/opt/
