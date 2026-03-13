@@ -1,0 +1,9 @@
+To copy the publish-artifacts folder from your Windows machine to your Ubuntu server (alftek-pro) using SSH, the easiest way is with scp.
+
+Since your SSH key login is already working, this will be very simple.
+
+Method 1 — Using scp from Windows PowerShell
+
+Run this from PowerShell on your Windows machine.
+
+scp -r publish-artifacts ubuntu@<SERVER_IP>:/home/ubuntu/
