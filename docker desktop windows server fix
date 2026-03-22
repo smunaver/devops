@@ -1,0 +1,10 @@
+   1 Set-Service -Name LanmanWorkstation -StartupType Automatic
+   2 Start-Service -Name LanmanWorkstation
+   3 sc.exe qc LanmanWorkstation
+   4 sc.exe queryex LanmanWorkstation
+   5 eventvwr.msc
+   6 sc.exe config LanmanWorkstation depend= bowser/mrxsmb20/nsi
+   7 Start-Service nsi
+   8 Start-Service mrxsmb20
+   9 Start-Service LanmanWorkstation
+  10 Get-Service LanmanWorkstation
