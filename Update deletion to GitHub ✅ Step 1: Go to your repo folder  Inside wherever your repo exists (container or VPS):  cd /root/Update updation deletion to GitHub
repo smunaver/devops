@@ -1,0 +1,42 @@
+Update deletion to GitHub
+✅ Step 1: Go to your repo folder
+
+Inside wherever your repo exists (container or VPS):
+
+cd /root/jenkins_sandbox_home
+
+(or your repo path)
+
+✅ Step 2: Check status
+git status
+
+You should see something like:
+
+deleted: filename.txt
+✅ Step 3: Stage the deletion
+git add .
+
+👉 This tells Git: “yes, I want to delete this file in the repo”
+
+(Alternative specific way:)
+
+git rm filename.txt
+✅ Step 4: Commit the change
+git commit -m "Removed unused file"
+✅ Step 5: Push to GitHub
+git push origin main
+🔥 DONE
+
+Your file is now:
+✅ Deleted locally
+✅ Deleted in GitHub repo
+
+⚠️ COMMON ISSUES
+❌ “nothing to commit”
+
+Means:
+
+File wasn’t tracked by Git
+👉 Fix:
+git add -A
+git commit -m "Sync changes"
