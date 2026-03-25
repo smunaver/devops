@@ -1,0 +1,40 @@
+git --version
+
+git lfs install
+git config --global user.name "sultanmunaver"
+git config --global user.email "sultan@inspireit.in"
+
+upload data to docker
+docker cp "D:\alf\publish-artifacts" itech-gitloaded:/root/
+
+verify
+docker exec -it itech-gitloaded bash
+
+apt update && apt install git -y
+cd ~
+cd jenkins_sandbox_home
+git init
+git add .
+git commit -m "Initial commit from VPS"
+
+on github
+
+Create repo on GitHub
+
+Go to:
+👉 https://github.com/new
+
+Create repo (e.g., jenkins_sandbox_home)
+
+onlocalhost 
+
+ls ~/.ssh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+cat ~/.ssh/id_ed25519.pub
+Add this to GitHub:
+GitHub → Settings → SSH Keys → Add key
+
+Push to GitHub
+git remote add origin git@github.com:YOUR_USERNAME/jenkins_sandbox_home.git
+git branch -M main
+git push -u origin main
