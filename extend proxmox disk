@@ -1,0 +1,5 @@
+parted /dev/sda
+   94  pvresize /dev/sda3
+   95  lvextend -l +100%FREE pve/data
+   96  lvs
+   97  nano /etc/lvm/lvm.conf
