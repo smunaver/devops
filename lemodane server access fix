@@ -1,0 +1,16 @@
+ExecStart=/usr/bin/lemonade-server serve
+The lemonade-server binary is running itself, and internally it starts the router (lemonade-router) on localhost by default.
+That’s why your browser can’t reach it from 192.168.0.11 — it only binds to 127.0.0.1.
+✅ How to fix it
+
+You need to pass --host 0.0.0.0 to the lemonade server, so the internal router binds to all interfaces.
+
+Edit the service file:
+sudo nano /usr/lib/systemd/system/lemonade-server.service
+Change the ExecStart line to:
+ExecStart=/usr/bin/lemonade-server serve --host 0.0.0.0
+--host 0.0.0.0 tells Lemonade to listen on all LAN interfaces, not just localhost.
+Reload systemd and restart the service:
+sudo systemctl daemon-reload
+sudo systemctl restart lemonade-server
+sudo systemctl status lemonade-server
